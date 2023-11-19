@@ -1,0 +1,30 @@
+.container-langs {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.container-langs img {
+  width: 30px;
+  height: 30px;
+  margin: 0 10px;
+  cursor: pointer;
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.container-langs img:hover {
+  transform: scale(1.1);
+  filter: brightness(1.2) hue-rotate(20deg);
+}
+
+.container-langs img::after {
+  content: attr(data-text); 
+  display: block;
+  text-align: center;
+  font-size: 12px;
+  margin-top: 5px;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #555; 
+}

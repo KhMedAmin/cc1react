@@ -1,0 +1,75 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: consolas;
+}
+
+.calculator {
+  position: relative;
+  width: 100%;
+  max-width: 400px; 
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: 15px 15px 20px rgba(0, 0, 0, 0.1), -15px -15px 20px #fffb;
+  background-color: #eee;
+  margin: 25px auto; 
+}
+
+h1 {
+  color: #2196f3;
+}
+
+.calculator input[type="button"] {
+  padding: 10px;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1), -5px -5px 20px #fff;
+  margin: 10px;
+  cursor: pointer;
+  user-select: none;
+  min-width: 66px;
+  font-size: 1.2em;
+  color: #666;
+  border-radius: 10px;
+  border: none;
+  background: #fff;
+}
+
+.calculator input[type="text"] {
+  padding: 10px;
+  box-shadow: inset 5px 5px 10px rgba(0, 0, 0, 0.1), inset -5px -5px 20px #fff;
+  border-radius: 10px;
+  margin-bottom: 12px;
+  width: 75%;
+  text-align: end;
+  font-size: 1.5em;
+}
+
+.calculator input[type="button"]:active {
+  box-shadow: inset 5px 5px 10px rgba(0, 0, 0, 0.1), inset -5px -5px 20px #fff;
+  color: #f44336;
+}
+
+.calculator input[type="button"].clear {
+  background: #f44336;
+  color: #fff;
+}
+
+.calculator input[type="button"].equal {
+  background: #2196f3;
+  color: #fff;
+}
+
+.calculator input[type="button"].dark {
+  color: #eee;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.25), -5px -5px 10px rgba(255, 255, 255, 0.1);
+}
+
+.calculator input[type="button"].dark:active {
+  box-shadow: inset 5px 5px 10px rgba(0, 0, 0, 0.1), inset -5px -5px 10px #fff;
+}
+
+@media (max-width: 600px) {
+  .calculator {
+    width: 90%; 
+  }
+}

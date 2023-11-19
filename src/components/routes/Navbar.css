@@ -1,0 +1,112 @@
+.navbar-container {
+    background-color: teal;
+    padding: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    
+    
+  }
+  
+  .nav-links {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: large;
+    font-weight:  bolder;
+  }
+  
+  .nav-links a {
+    color: #333;
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .nav-links a:hover {
+    background-color: #ddd;
+  }
+  
+  .nav-links a.active {
+    background-color: #ddd;
+    font-weight: bold;
+  }
+  
+  .nav-links a.active:hover {
+    background-color: #ccc;
+  }
+  
+  .nav-links a.borderYtoX {
+    position: relative;
+    display: inline-block;
+    text-decoration: none;
+    color: #FFF;
+    margin: 0 10px;
+    position: relative;
+}
+
+.nav-links a.borderYtoX:before, .nav-links a.borderYtoX:after {
+    position: absolute;
+    opacity: 0.5;
+    height: 100%;
+    width: 2px;
+    content: '';
+    background: #FFF;
+    transition: all 0.3s;
+}
+
+.nav-links a.borderYtoX:before {
+    left: 0px;
+    top: 0px;
+}
+
+.nav-links a.borderYtoX:after {
+    right: 0px;
+    bottom: 0px;
+}
+
+.nav-links a.borderYtoX:hover:before, .nav-links a.borderYtoX:hover:after {
+    opacity: 1;
+    height: 2px;
+    width: 100%;
+}
+
+.toggle-button {
+  display: none; /* Par défaut, le bouton est masqué */
+  background-color: teal;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-bottom: 10px;
+}
+
+.toggle-button:hover {
+  background-color: darkcyan;
+}
+
+.nav-links a.borderYtoX:hover {
+  color: black;
+}
+@media (max-width: 768px) {
+  .nav-links {
+    display: none; /* Masquer les liens par défaut sur les petits écrans */
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .nav-links.show {
+    display: flex; /* Afficher les liens lorsque la classe "show" est appliquée */
+  }
+
+  .toggle-button {
+    display: block; /* Afficher le bouton de bascule sur les petits écrans */
+  }
+}
+
+@media (min-width: 769px) {
+  .toggle-button {
+    display: none; /* Masquer le bouton de bascule sur les grands écrans */
+  }
+}

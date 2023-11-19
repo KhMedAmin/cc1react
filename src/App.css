@@ -1,5 +1,10 @@
 .App {
   text-align: center;
+  
+}
+
+.dark-body{
+  background-color: #060606;
 }
 
 .App-logo {
@@ -35,4 +40,21 @@
   to {
     transform: rotate(360deg);
   }
+}
+body {
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+body.dark {
+  --background-color: #1e1e1e;
+  --text-color: #ffffff;
+}
+
+body.light {
+  --background-color: #ffffff;
+  --text-color: #000000;
+}
+.light{
+  background-color: yellow;
 }
